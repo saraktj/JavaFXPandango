@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.pandango.ChangeInfoController">
+   <children>
+      <TextField fx:id="newEmail" layoutX="90.0" layoutY="152.0" promptText="New Email" />
+      <Text layoutX="114.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Email" />
+      <Text layoutX="355.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password" />
+      <PasswordField fx:id="newPass" layoutX="335.0" layoutY="194.0" promptText="New Password" />
+      <Button fx:id="changePass" layoutX="355.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnClick" text="Change Password" />
+      <TextField fx:id="email" layoutX="90.0" layoutY="110.0" promptText="Old Email" />
+      <PasswordField fx:id="pass" layoutX="90.0" layoutY="194.0" promptText="Password" />
+      <TextField fx:id="email1" layoutX="335.0" layoutY="110.0" promptText="Email" />
+      <PasswordField fx:id="pass1" layoutX="335.0" layoutY="152.0" promptText="Old Password" />
+      <Button fx:id="changeEmail" layoutX="120.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnClick" text="Change Email" />
+   </children>
+</AnchorPane>

@@ -5,6 +5,7 @@
  */
 package com.pandango.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -17,7 +18,32 @@ public class User {
     private String email;
     private String major;
     private String bio;
-    private Map<String, Integer> movieList;
+    private int admin;
+    private int loginAttempts;
+    private Map<String, Double> movieList = new HashMap<>();
+    
+    public User() {
+        
+    }
+    public User(String firstName, String lastName, String email, String major, String bio) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.major = major;
+        this.bio = bio;
+        admin = 0;
+        loginAttempts = 0;
+    }
+    
+    public User(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.major = null;
+        this.bio = null;
+        admin = 0;
+        loginAttempts = 0;
+    }
     
     public String getFirstName() {
         return firstName;
@@ -59,12 +85,32 @@ public class User {
         this.bio = bio;
     }
 
-    public Map<String, Integer> getMovieList() {
+    public Map<String, Double> getMovieList() {
         return movieList;
     }
 
-    public void setMovieList(Map<String, Integer> movieList) {
+    public void setMovieList(Map<String, Double> movieList) {
         this.movieList = movieList;
     }
     
+    
+    public int getLoginAttempts() {
+        return loginAttempts;
+    }
+
+    public void setLoginAttempts(int loginAttempts) {
+        this.loginAttempts = loginAttempts;
+    }
+    
+    public int getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(int admin) {
+        this.admin = admin;
+    }
+    
+    public String toString() {
+        return (email);
+    }
 }

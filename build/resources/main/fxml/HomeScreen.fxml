@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pandango.HomeScreenController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="40.0" prefHeight="367.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="searchTab" onSelectionChanged="#checkTab" text="Search Movies">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchText" layoutX="35.0" layoutY="19.0" />
+                        <Button fx:id="searchBtn" layoutX="194.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnClick" text="Search" />
+                        <ListView fx:id="listView" layoutX="35.0" layoutY="55.0" onMouseClicked="#mouseClickedSearch" prefHeight="262.0" prefWidth="531.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="newReleasesTab" onSelectionChanged="#checkTab" text="New Releases">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listView1" layoutX="35.0" layoutY="55.0" onMouseClicked="#mouseClickedSearch" prefHeight="262.0" prefWidth="531.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="topRentals" onSelectionChanged="#checkTab" text="Top Rentals">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listView2" layoutX="35.0" layoutY="55.0" onMouseClicked="#mouseClickedSearch" prefHeight="262.0" prefWidth="531.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="profile" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnClick" text="Profile" />
+      <Button fx:id="logout" layoutX="525.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnClick" text="Logout" />
+   </children>
+</AnchorPane>

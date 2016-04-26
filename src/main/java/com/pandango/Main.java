@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException { 
-        Parent screen = FXMLLoader.load(getClass().getResource("/fxml/UserLoginFXML.fxml"));
+        Parent screen = FXMLLoader.load(getClass().getResource("/fxml/UserLogin.fxml"));
         Group root = new Group();
         root.getChildren().addAll(screen);
         Scene scene =  new Scene(root);
